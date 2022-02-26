@@ -1,0 +1,39 @@
+extends ../layout
+
+block content 
+    #invoice-content
+        h1 Invoice Page
+        span Full Name: 
+        span=data.fullName 
+        span &nbsp; &nbsp; &nbsp; Company: 
+        - var companyName = data.companyName ? data.companyName : "N/A"
+        span=companyName
+        br
+        span Address Line 1: 
+        span=data.addressOne
+        br
+        span Address Line 2: 
+        - var addressTwo = data.addressTwo ? data.addressTwo : "N/A"
+        span=addressTwo
+        br
+        span City: 
+        span=data.city   
+        span &nbsp; &nbsp; &nbsp; Region: 
+        - var region = data.region ? data.region : "N/A"
+        span=region
+        span &nbsp; &nbsp; &nbsp; Country: 
+        span=data.country
+        br
+        span Postcode: 
+        span=data.zip
+        br
+        br
+        #cart-list-invoice
+        br
+        span Total Price: HK$ 
+        span#total-price-invoice
+
+    #thank-you 
+        h4 Thanks for ordering. Your music will be delivered within 7 working days.
+        button#invoice-done OK
+

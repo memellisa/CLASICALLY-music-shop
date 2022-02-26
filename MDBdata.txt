@@ -1,0 +1,45 @@
+Instruction:
+Connect to the url below using MongoDB Compass
+mongodb+srv://memellisa:memellisa05@cluster0.xk7ei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+In the MongoDB Compass you can see the current collection and schema for each of the cart, music and user model
+
+
+My schema is as follow:
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+1. Music 
+var musicSchema = new Schema({
+    // musicId: String,
+    name:  { type : String , required : true },
+    category: String,
+    composer: String,
+    description: String,
+    price: Number,
+    published: String,
+    newArrival: String,
+    image: String,
+    clip: String,
+    link: String,
+
+});
+module.exports = mongoose.model('Music', musicSchema)
+
+2. Cart
+var cartSchema = new Schema({
+    musicId: { type : String , required : true },
+    musicName: { type : String , required : true },
+    musicPrice: { type : Number , required : true },
+    username: { type : String , required : true },
+    quantity: { type : Number , required : true },
+});
+module.exports = mongoose.model('Cart', cartSchema)
+
+3. User 
+const userSchema = new Schema({
+    username: String,
+    password: String,
+});
+module.exports = mongoose.model('user', userSchema);

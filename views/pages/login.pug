@@ -1,0 +1,37 @@
+
+extends ../layout
+
+block header 
+  //- include ../includes/header.pug
+  #main-heading
+    p#logo Classically
+    #buttons
+      if loggedIn == false
+          button#signInBtn(type='button') Sign in 
+          button#registerBtn(type='button') Register 
+      else
+          button#logOutBtn(type='button') Log Out
+      #cart
+          button#cartBtn(type='button') Cart   
+          p#num-of-items 0
+  
+    #search
+        input#keyword(type='text' placeholder='Keyword(s)' name='keyword')
+        button#searchBtn(type='button') Search 
+    
+    
+block content
+  #login-card
+    #message
+        p#logo Classically
+        p Let's start exploring good music! 
+    form#cred-form(action='/login', method='POST')
+        input#username(type='text' placeholder='Username' name='username')
+        block warning-username
+        br
+        input#password(type='password' placeholder='Password' name='password')
+        block warning-password
+    br
+    button#createBtn(type='button') CREATE
+    button#submitBtn(type='button') SUBMIT
+    

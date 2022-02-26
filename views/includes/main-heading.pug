@@ -1,0 +1,16 @@
+header#main-heading
+    #search
+        //- form#searchForm(action='/', method='GET')
+        input#keyword(type='text' placeholder='Keyword(s)' name='keyword')
+        button#searchBtn(type='button') Search 
+    br
+    br
+    #buttons
+        if loggedIn
+            button#signInBtn(type='button') Sign in 
+            button#registerBtn(type='button') Register 
+        else
+            buton#logOutBtn(type='button') Log Out
+        #cart
+            button#cartBtn(type='button') Cart   
+            #num-of-items 0

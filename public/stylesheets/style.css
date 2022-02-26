@@ -1,0 +1,1015 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#blank-page{
+  margin: 40px auto;
+  text-align: center;
+}
+
+#blank-page h2, #blank-page h1{
+  color: whitesmoke;
+}
+
+#main-heading{
+  top: 0;
+  left: 0;
+  padding: 10px 30px 30px;
+  background-color: #f0ebf8;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* background-color: #242c4c; */
+  background-color: #2c3454;
+}
+button, nav, a, h1, h2, h3, p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #242c4c;
+}
+
+p{
+  margin: 0;
+}
+
+#message{
+  padding-top: 30px;
+}
+
+#logo{
+  font-family: 'Brush Script MT', cursive;
+  font-size: 50px;
+  color: #a4547c;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+#login-card{
+  margin:200px auto;
+  background-color: #f0ebf8;
+  width: 500px;
+  height: 370px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0px 30px 40px -20px black;
+  /* padding: 50px; */
+}
+#cred-form{
+  padding-top:25px;
+}
+#cred-form input{
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid lightgray 0.1px;
+  font-size: 17px;
+  margin: 10px;
+}
+
+#login-card button{
+  width:120px;
+  height:50px;
+  margin: 0 40px;
+  padding: 10px;
+  text-align: center;
+  background-color: #d0c0d0;
+  border-radius: 20px;
+  border-color: whitesmoke;
+  border-style: solid;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#signInBtn, #registerBtn, #logOutBtn, #cartBtn, #searchBtn,
+#addCartBtn, #backFromCart, #checkoutFromCart, .deleteCart {
+  margin-top: 30px;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #d0c0d0;
+} 
+
+ #cartBtn:hover, #searchBtn:hover, #addCartBtn:hover, 
+ #login-card button:hover, #checkoutFromCart:hover, #backFromCart:hover, .deleteCart:hover {
+  background-color: whitesmoke;
+  font-style: italic;
+  color: black;
+}
+
+#signInBtn:active, #registerBtn:active, #logOutBtn:active, 
+#cartBtn:active, #searchBtn:active, #addCartBtn:active, #login-card button:active, 
+#checkoutFromCart:active, #backFromCart:active, .deleteCart:active {
+  background-color: #a4547c;
+  color: white;
+}
+
+#signInBtn, #registerBtn, #logOutBtn{
+  background-color: #f0ebf8;
+  margin-right: 10px;
+}
+
+
+.music-card{
+  margin:20px;
+  background-color: #f0ebf8;
+  max-width: 400px;
+  max-height: 600px;
+  height: fit-content;
+  border-radius: 20px;
+  /* text-align: center; */
+  padding: 30px;
+}
+
+.card-content{
+  max-height: 400px;
+  max-width: 200px;
+}
+
+.card-content a{
+  font-size: 19px;
+  text-decoration: none;
+  color: #242c4c;
+  font-weight: 700;
+}
+.music-card img{
+  max-height: 200px;
+  max-width: inherit;
+  margin: 10px 0;
+}
+
+
+#price{
+ font-weight: 700;
+}
+
+#music-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#new-arrival{
+  font-size: 18px;
+  color: #a4547c;
+}
+
+
+#content{
+  display: flex;
+  
+}
+
+#buttons{
+  /* display: flex; */
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 90px !important;
+}
+
+
+
+
+#cart {
+  position: relative;
+  display: inline-block;
+}
+
+#cartBtn {
+
+  margin: 0;
+}
+
+#num-of-items {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  background-color: #c4799f;
+  min-width: 25px;
+  width: fit-content;
+  font-size: 15px;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+}
+
+#search{
+  position: relative;
+  width: 600px;
+}
+
+#keyword{
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 400px !important;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid whitesmoke;
+  border-width: 0.5px;
+}
+
+#searchBtn{
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  left: 410px !important;
+}
+
+
+#category-nav h2{
+  margin: 0;
+  padding: 30px;
+}
+
+#category-nav{
+  background-color: #d0c0d0;
+  height: 100%;
+  border-radius: 0 30px;
+  font-family: "Trebuchet MS", sans-serif;
+  
+  width: 180px;;
+  
+  position: fixed;
+  margin-top: 130px;
+  
+  text-align: justify;
+  display: block;
+  text-align: left;
+  left: 0;
+}
+
+#category-nav a{
+  display: block;
+  font-size: 18px;
+  padding: 10px 30px;
+  text-decoration: none; 
+  border-radius: 5px;
+}
+
+#category-nav a:hover {
+  background-color: #f0ebf8;
+  /* font-size: 17px; */
+  font-style: italic;
+  color: #242c4c;
+}
+
+#category-nav a:active {
+  background-color: #a4547c;
+  color: white;
+}
+
+#content-head{
+  padding-left: 30px;
+}
+
+#directory{
+  margin-top: 20px;
+  display: flex;
+  width: fit-content;
+}
+
+#directory a, #directory p{
+  color: #f0ebf8;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+#music-content{
+  margin-left: 200px;
+  margin-top: 140px;
+}
+
+#content-head h1{
+  margin-bottom: 0;
+  color: #f0ebf8;
+
+}
+
+#single-content{
+  margin-top: 160px;
+  
+}
+
+#single-music-card{
+  width: 85%;
+  margin: 40px auto;
+  background-color: #f0ebf8;
+  border-radius: 20px;
+  height: fit-content;
+  padding: 35px;
+  position: relative;
+  display: flex;
+}
+
+audio{
+  width: 240px;
+}
+
+#assets{
+  margin: 0;
+  padding-right: 30px;
+  width: fit-content;
+}
+
+/* #single-card-content h1{
+  margin: 0;
+  color: #242c4c;
+} */
+
+#single-music-card img{
+  /* max-height: 250px; */
+  width: 250px;
+  margin: 10px 0;
+  
+}
+
+#card-detail{
+  position: absolute;
+  /* display: inline-block; */
+  font-size: 16px;
+  left: 280px;
+  top: 20%;
+  /* top: 110px; */
+}
+
+#card-detail p{
+  /* padding-bottom: 10px; */
+  /* margin-right: 350px; */
+  line-height: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+
+#order-music{
+  position: absolute;
+  bottom: 40px;
+  /* width: 400px; */
+  right: 50px;
+}
+
+#order-form{
+  width: 230px;
+  display: flex;
+  margin-right: 0;
+  width: fit-content;
+}
+#order-form p{
+  padding-right: 10px;
+}
+
+#addCartBtn{
+  margin: 0;
+  padding: 0;
+  width: 100px !important;
+  height: 30px;
+}
+#cart-page-title{
+  margin-top: 160px;
+  color: whitesmoke;
+  margin-left: 10%;
+  margin-bottom: 0;
+}
+
+#cart-list {
+  margin: 50px 10%;
+}
+
+.cart-card {
+  padding: 30px;
+  border-radius: 30px;
+  margin-top: 30px;
+  background-color: #f0ebf8;
+}
+
+.cart-card h2{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.cart-card p{
+  line-height: 35px;
+}
+
+.deleteCart{
+  margin-top: 10px;
+}
+
+#card-total{
+  margin: 0 10%;
+  /* margin-top: 30px; */
+  padding: 5px 20px;
+  border-radius: 30px;
+  background-color: #a4547c;
+  
+  text-align: center;
+  width: fit-content;
+
+  color: whitesmoke;
+}
+
+#empty-cart{
+  text-align: center;
+  margin: auto;
+  color: whitesmoke;
+}
+
+#cart-buttons{
+  margin: 0 auto;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#backFromCart, #checkoutFromCart{
+  /* position: absolute; */
+  display: block;
+  width: 180px;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  /* margin: 0 auto */
+}
+
+#account-prompt {
+  background-color: #f0ebf8;
+  height: 150px;
+  /* padding: 50px; */
+  /* font-size: 20px; */
+  position: relative;
+  display: flex;
+}
+
+#account-prompt-first {
+  width: 35%;
+  position: absolute;
+  top: 10px;
+  left: 10%;
+  text-align: center;
+  /* display: flex; */
+}
+
+#or{
+  position: absolute;
+  top: 40px;
+  font-size: 20px;
+  left: 50%;
+}
+
+#account-prompt-second {
+  width: 35%;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  right: 10%;
+}
+
+#account-prompt-second a, #account-prompt-first p{
+  font-size: 20px;
+}
+
+#account-prompt-second a:hover{
+  color: #a4547c;
+}
+
+#checkout-form {
+  background-color: #f0ebf8;
+  margin:  30px 7%;
+  padding: 40px;
+  border-radius: 30px;
+  line-height: 35px;
+}
+
+#createExpressAccount {
+  margin-bottom: 20px;
+}
+
+#checkout-form h2{
+  margin: 0;
+  color: #242c4c;
+}
+
+
+#checkout-cart-list {
+  background-color: #d0c0d0;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  color: #242c4c;
+}
+
+#checkout-cart-list a{
+  color:#a4547c;
+}
+
+#invoice-content {
+  background-color: #f0ebf8;
+  margin: 30px;
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 30px;
+}
+
+#total-remove-style {
+  border: none;
+background-color:transparent;
+}
+
+#checkout-form button,  #invoice-done{
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 90px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #d0c0d0;
+}
+
+#invoice-content{
+  line-height: 30px;
+  color: #242c4c;
+}
+
+#invoice-content h1{
+  margin: 0 0 20px;
+}
+
+#thank-you{
+  margin-left: 5%;
+  width: 60%;
+  position: relative;
+}
+
+#thank-you h4{
+  color: whitesmoke;
+}
+
+#invoice-done{
+  position: absolute;
+}
+
+
+@media screen and (max-width: 800px) { 
+
+  #main-heading{
+    padding: 5px 15px 20px;
+    height: 80px;
+  }
+
+  #message{
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  
+  #logo{
+    font-size: 30px;
+  }
+  
+  
+  #login-card{
+    margin:150px auto;
+    width: 300px;
+    height: 270px;
+  }
+  #cred-form{
+    padding-top:5px;
+  }
+  #cred-form input{
+    width: 270px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  #login-card button{
+    width:90px;
+    height:40px;
+    margin: 0 25px;
+    font-size: 14px;
+  }
+  
+  #signInBtn, #registerBtn, #logOutBtn, #cartBtn, #searchBtn,
+  #addCartBtn, #backFromCart, #checkoutFromCart, .deleteCart {
+    margin-top: 0px;
+    height: 25px;
+    width: 60px;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 12px;
+  } 
+  
+  
+  #signInBtn, #registerBtn, #logOutBtn{
+    margin-right: 5px;
+    background-color: transparent;
+  }
+
+  #signInBtn, #registerBtn{
+    width: 50px;
+  }
+
+  #logOutBtn{
+    width: 70px;
+  }
+
+  .music-card{
+    margin:10px;
+    max-width: 200px;
+    /* max-height: 600px; */
+    height: fit-content;
+    padding: 15px;
+  }
+  
+  .card-content{
+    max-height: 400px;
+    max-width: 150px;
+  }
+  
+  .card-content a{
+    font-size: 13px;
+  }
+  .music-card img{
+    max-height: 120px;
+    max-width: inherit;
+    margin: 5px 0;
+  }
+  
+  .card-detail{
+    font-size: 10px;
+  }
+
+  #price{
+   font-weight: 700;
+   
+  }
+  
+  
+  #new-arrival{
+    font-size: 12px;
+  }
+  
+  
+  #buttons{
+    top: 17px;
+    right: 50px !important;
+  }
+  
+  
+  #cart {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #cartBtn {
+    width: 40px;
+  }
+  
+  #num-of-items {
+    right: -6px;
+    top: -6px;
+    min-width: 17px;
+    font-size: 12px;
+  }
+  
+  #search{
+    top: 15px;
+    width: 70%;
+  }
+  
+  #keyword{
+    height: 18px;
+    width: 65% !important;
+  }
+  
+  #searchBtn{
+    width: 60px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    left: 70% !important;
+  }
+  
+  
+  #category-nav h2{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  #category-nav{
+    width: 90px;
+    margin-top: 105px;
+  
+  }
+  
+  #category-nav a{
+    font-size: 12px;
+    padding: 7px 10px;
+    text-decoration: none; 
+  }
+  
+  #category-nav a:hover {
+    background-color: #f0ebf8;
+    /* font-size: 17px; */
+    font-style: italic;
+    color: #242c4c;
+  }
+  
+  #category-nav a:active {
+    background-color: #a4547c;
+    color: white;
+  }
+  
+  #content-head{
+    padding-left: 15px;
+  }
+  
+  #directory{
+    margin-top: 15px;
+    display: flex;
+    width: fit-content;
+  }
+  
+  #directory a, #directory p{
+    color: #f0ebf8;
+    padding-right: 10px;
+    font-size: 10px;
+    text-decoration: none;
+  }
+  
+  #music-content{
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  
+  #filter{
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  
+  #single-content{
+    margin-top: 120px;
+  }
+
+  #musicName{
+    font-size: 11px !important;
+    margin: 0;
+  }
+  
+  #single-music-card{
+    width: fit-content;
+    min-width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  audio{
+    width: 100px;
+    height: 20px;
+  }
+  
+  #assets{
+    padding-right: 10px;
+  }
+  
+  #musicName{
+    font-size: 13px;
+  }
+  
+  #single-music-card img{
+    min-height: 100px;
+    max-width: 80px;
+    margin: 10px 0;
+  }
+  
+  #card-detail{
+    
+    left: 80px
+  }
+  
+  #card-detail p{
+    /* padding-bottom: 10px; */
+    font-size: 7px;
+    margin-right: 15px;
+    line-height: 10px;
+  }
+  
+  
+  #order-music{
+    position: absolute;
+    bottom: 20px;
+    /* width: 400px; */
+    right: 20px;
+    height: 20px;
+  }
+  
+  #order-form{
+    display: flex;
+    margin-right: 0;
+    width: fit-content;
+  }
+
+  #order{
+    width: 50px;
+    height: 8px;
+    font-size: 8px;
+  }
+  #order-form p{
+    padding-right: 5px;
+    font-size: 7px;
+  }
+  
+  #addCartBtn{
+    width: 50px !important;
+    height: 15px;
+    font-size: 6px;
+  }
+  #cart-page-title{
+    margin-top: 120px;
+    font-size: 14px;
+    margin-left: 10%;
+  }
+  
+  #cart-list {
+    margin: 20px 10%;
+  }
+  
+  .cart-card {
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  
+  .cart-card h2{
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+  .cart-card p{
+    line-height: 15px;
+    font-size: 10px;
+  }
+  
+  .deleteCart{
+    margin-top: 10px;
+    font-size: 8px;
+    width: 40px;
+    height: 20px;
+  }
+  
+  #card-total{
+    width: fit-content;
+    font-size: 10px;
+    color: whitesmoke;
+  }
+  
+  #empty-cart{
+    text-align: center;
+    margin: auto;
+    color: whitesmoke;
+    font-size: 13px;
+  }
+  
+  #cart-buttons{
+    margin: 10px auto;
+  }
+  
+  #backFromCart, #checkoutFromCart{
+    /* position: absolute; */
+    display: block;
+    width: 60px;
+    font-size: 9px;
+    font-weight: 700;
+    /* margin: 0 auto */
+  }
+  
+  #account-prompt {
+    height: 100px;;
+  }
+  
+  /* #account-prompt-first { */
+    /* width: 35%; */
+    /* top: 10px;
+    left: 10%;
+    text-align: center; */
+    /* display: flex; */
+  /* } */
+
+  #account-prompt h1{
+    font-size: 11px;
+  }
+
+  #account-prompt a, #account-prompt p{
+    font-size: 10px !important;
+  }
+
+  #or{
+    top: 30px;
+    font-size: 10px;
+  }
+  
+  
+  #account-prompt-second a:hover{
+    color: #a4547c;
+  }
+  
+  #checkout-form {
+    background-color: #f0ebf8;
+    margin:  20px 7%;
+    padding: 20px;
+    line-height: 15px;
+  }
+  
+  /* #createExpressAccount {
+    margin-bottom: 20px;
+  } */
+  
+  #checkout-form h2{
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  
+  #checkout-form span{
+    font-size: 9px;
+  }
+
+  #checkout-form input{
+    font-size: 7px;
+    height: 8px;
+  }
+  
+  #checkout-cart-list {
+    background-color: #d0c0d0;
+    margin: 8px 3px;
+    font-size: 7px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #242c4c;
+  }
+  
+  #checkout-cart-list a{
+    font-size: 8px;
+  }
+  
+  #invoice-content {
+    width: fit-content;
+    height: fit-content;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  #total-remove-style {
+    border: none;
+  background-color:transparent;
+  }
+  
+  #checkout-form button,  #invoice-done{
+    height: 20px;
+    width: 50px;
+    font-size: 9px;
+  }
+  
+  #invoice-content{
+    line-height: 17px;
+    color: #242c4c;
+  }
+  
+  #invoice-content h1{
+    font-size: 15px;
+  }
+  
+  #invoice-content span{
+    font-size: 9px;
+  }
+  
+  #thank-you{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  #thank-you h4{
+    margin-top: 0;
+    font-size: 9px;
+  }
+  
+  #invoice-done{
+    position: absolute;
+    right: 0;
+  }
+} 
+

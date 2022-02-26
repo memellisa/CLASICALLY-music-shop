@@ -1,0 +1,54 @@
+
+extends ../layout
+
+block header 
+    #main-heading
+        p#logo Classically
+        #search
+            input#keyword(type='text' placeholder='Keyword(s)' name='keyword')
+            button#searchBtn(type='button') Search 
+    
+        #buttons
+            if loggedIn == false
+                button#signInBtn(type='button') Sign in 
+                button#registerBtn(type='button') Register 
+            else
+                buton#logOutBtn(type='button') Log Out
+            #cart
+                button#cartBtn(type='button') Cart   
+                p#num-of-items 0
+  
+block content 
+    #single-content
+        #content-head
+            #directory
+                a(href='/') Home
+                p >
+                a(href='/music/'+music._id)=name
+            
+            
+        #single-music-card 
+            #single-card-content
+                h1#musicName=name
+                #assets
+                    img(src='../../Materials/'+ music.image )
+                    br
+                    audio(preload="auto", autobuffer, controls, autoplay)
+                        source(src='../../Materials/'+ music.clip)
+            #card-detail
+                p="Composer : "+music.composer 
+                p="Published : "+music.published 
+                p="Category : "+music.category 
+                p="Description : "+music.description 
+                //- p=music.description 
+                p#price(name=music.price)="Price: $ "+music.price
+
+            #order-music 
+                #order-form
+                    p Order:
+                    input#order(type='text' name='order' value=1)
+                    button#addCartBtn(name=music._id) Add to Cart 
+
+
+  
+    

@@ -1,0 +1,58 @@
+
+extends ../layout
+
+
+block header 
+    #main-heading
+        p#logo Classically
+        #buttons
+            if loggedIn == false
+                button#signInBtn(type='button') Sign in 
+                button#registerBtn(type='button') Register 
+            else
+                button#logOutBtn(type='button') Log Out
+            #cart
+                button#cartBtn(type='button') Cart   
+                p#num-of-items 0
+        #search
+            input#keyword(type='text' placeholder='Keyword(s)' name='keyword')
+            button#searchBtn(type='button') Search 
+ 
+        
+
+block content
+    #content
+        nav#category-nav
+            h2 Category
+            #category-list
+                if categories
+                    each category in categories 
+                        a(href='/category/'+encodeURIComponent(category))=category
+
+        
+        #music-content    
+            #content-head
+                #directory
+                    a(href='/') Home
+                    if filter !== "" && filter !== "Music"
+                        p >  
+                        a(href='/category/'+filter)=filter
+                h1#filter="All "+filter
+                
+            #music-list 
+                if musics
+                    each music in musics
+                        .music-card
+                            .card-content
+                                a(href='/music/'+music._id)=music.name 
+                                br
+                                img(src='../../Materials/'+ music.image )
+                                .card-detail
+                                    if music.newArrival === 'Yes'
+                                        p#new-arrival NEW ARRIVAL !
+                                    p#composer="Composer: "+music.composer 
+                                    p#price="Price: $ "+music.price
+
+
+    
+        

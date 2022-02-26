@@ -1,0 +1,107 @@
+extends ../layout
+
+block content 
+    if loggedIn == false 
+        #account-prompt
+            #account-prompt-first
+                h1 Are you new?
+                p Create an account and checkout below
+                //- span I'm a new customer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                //- span I'm already a customer
+            h3#or Or
+            #account-prompt-second
+                h1 Have an account?
+                a(href="/login") Sign in 
+
+                //- span Please checkout below  &nbsp; &nbsp;
+                //- span or   &nbsp; &nbsp;
+                //- a(href="/login") Sign in
+
+    #checkout-form
+        form#checkoutForm(method="POST" action="/invoice" onSubmit="return checkoutSubmit(event, this)")
+            if loggedIn == false 
+                #createExpressAccount
+                    h2 Create Account:
+                    span Username &nbsp;
+                    input#usernameExpress(type="text" placeholder="Desired Username" required)
+                    span#duplicatedWarning(style="color: #a4547c; display: none;") &nbsp; Username Duplicated!
+                    br
+                    span Password &nbsp;
+                    input#passwordExpress(type="password" placeholder="Desired Password" required)
+                    br
+            h2 Delivery address:
+            span Full Name &nbsp;
+            input#fullNameCheckout(type="text" placeholder="Required" name="fullName" required)
+            br
+            span Company Name &nbsp;
+            input#companyNameCheckout(type="text" name="companyName" )
+            br
+            span Address Line 1 &nbsp;
+            input#addressOneCheckout(type="text" placeholder="Required" name="addressOne" required)
+            br
+            span Address Line 2 &nbsp;
+            input#addressTwoCheckout(type="text" name="addressTwo" )
+            br
+            span City &nbsp;
+            input#cityCheckout(type="text" placeholder="Required" name="city" required)
+            br
+            span Region/State/District &nbsp;
+            input#regionCheckout(type="text" name="region" )
+            br
+            span Country &nbsp;
+            input#countryCheckout(type="text" placeholder="Required" name="country" required)
+            br
+            span Postcode/Zip Code &nbsp;
+            input#zipCheckout(type="text" placeholder="Required"  name="zip" required)
+            br
+            
+            #checkout-cart-list
+                span Your order: &nbsp; &nbsp;
+                a(href="/cart") (change)
+                br
+                //- br
+                b Free Standard Shipping
+                br
+                //- br
+                if carts
+                    each cart in carts
+                        span.quantity-checkout=cart.quantity
+                        span x &nbsp;
+                        span.name-checkout=cart.musicName
+                        span &nbsp; &nbsp; &nbsp;
+                        span HK$
+                        span.price-checkout=cart.musicPrice
+                        br
+                br
+                b Total Price: HK$ 
+                b#checkout-total=total
+            
+            button(type="submit") Confirm
+
+    //- #checkout-form
+    //-     #content-head
+    //-         #directory
+    //-             a(href='/') Home
+    //-             p >
+    //-             a(href='/music/'+music._id)=name
+            
+            
+    //-     #single-music-card 
+    //-         #single-card-content
+    //-             h1#musicName=name
+    //-             img(src='../../Materials/'+ music.image )
+    //-             .card-detail
+    //-                 audio(preload="auto", autobuffer, controls, autoplay)
+    //-                     source(src='../../Materials/'+ music.clip)
+    //-                 p#composer="Composer: "+music.composer 
+    //-                 p#published="Published: "+music.published 
+    //-                 p#category="Category: "+music.category 
+    //-                 p#description="Description: "+music.description 
+    //-                 p#price(name=music.price)="Price: $ "+music.price
+
+    //-         #order-music 
+    //-             form#order-form(action='/cart', method='POST')
+    //-                 p Order:
+    //-                 input#order(type='text' name='order' value=1)
+    //-             button.addCartBtn(type='button' name=music._id) Add to Cart 
+
